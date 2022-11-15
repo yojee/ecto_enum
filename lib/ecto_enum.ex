@@ -105,7 +105,7 @@ defmodule EctoEnum do
   defmacro defenum(module, enum) do
     quote do
       enum = Macro.escape(unquote(enum))
-      [h | _t] = enum
+      [h | _] = enum
 
       enum =
         cond do
